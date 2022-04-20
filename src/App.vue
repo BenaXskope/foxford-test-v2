@@ -48,7 +48,7 @@ const loadRepos = async() => {
     const error = findResult.value
     if (ServerUnavailableError.guard(error))
       // eslint-disable-next-line no-console
-      console.log('Handled server unavailable error') // Обработка ошибок
+      console.log(`Handled error: ${error}`) // Обработка ошибок
     else
       exhaustiveCheck(error) // Проверяем, что обработали все
   }
